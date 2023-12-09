@@ -12,7 +12,10 @@ Admin
 4. API thông tin chi tiết của Expert Team: http://localhost:8082/Project_Pettu/api/expert_team/detailInfo
 5. API thông tin chi tiết của Expert Team theo Position: http://localhost:8082/Project_Pettu/api/expert_team/detailWithPosition
 6. API danh sách bài viết theo danh mục: http://localhost:8082/Project_Pettu/api/blogs/listBlog
-6. API danh sách các sản phẩm: http://localhost:8082/Project_Pettu/api/products/listProduct
+7. API danh sách các sản phẩm: http://localhost:8082/Project_Pettu/api/products/listProduct
+8. API thêm sản phẩm: http://localhost:80/Project_Pettu-main/api/dashboard/addProduct
+9. API xóa sản phẩm: http://localhost:80/Project_Pettu-main/api/dashboard/deleteProduct
+10.API cập nhập thông tin sản phâm: http://localhost:80/Project_Pettu-main/api/dashboard/uppdateProduct
 
 
 Admin Page
