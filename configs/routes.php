@@ -32,6 +32,7 @@ $routes['api/dashboard/uppdateProduct'] = 'admin/dashboard/product/updateProduct
 $routes['api/dashboard/deleteProduct'] = 'admin/dashboard/product/deleteProduct';//API xóa sản phẩm
 
 $routes['api/dashboard/getListTimeWork'] = 'admin/dashboard/timework/getListTimeWork';//API lấy danh sách thông tin thời gian việc làm
+$routes['api/dashboard/addTimeWork'] = 'admin/dashboard/timework/addTimeWork';//API thêm thời gian việc làm
 
 
 // User API

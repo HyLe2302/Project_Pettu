@@ -29,61 +29,51 @@ class TimeWork extends Controller {
         endif;
     }
 
-    // public function addProduct(){
-    //     $request = new Request();
-    //     $response =[];
+    // ADD Time Working
+    public function addTimeWork(){
+        $request = new Request();
+        $response =[];
 
-    //     if ($request->isPost()):
-    //         $data = $request->getFields();
+        if ($request->isPost()):
+            $data = $request->getFields();
 
-    //         if(!empty($data)):
-    //             $request->rules([
-    //                 'product_name' => 'required|min:6',
-    //                 'price' => 'required',
-    //                 'quantity' => 'required',
-    //                 'color' => 'required',
-    //                 'evaluate_quantity' => 'required',
-    //                 'product_status' => 'required',
-    //             ]);
+            if(!empty($data)):
+                $request->rules([
+                    'timeworking' => 'required',
+                ]);
 
-    //             $request->message([
-    //                 'product_name.required' =>'Tên sản phẩm không được để trống.',
-    //                 'product_name.min' =>'Tên sản phẩm không ít hơn 5 kí tự.',
-    //                 'price.required' =>'Giá sản phẩm không được để trống.',
-    //                 'quantity.required' =>'Số lượng sản phẩm không được để trống.',
-    //                 'color.required' =>'Màu sản phẩm không được để trống.',
-    //                 'evaluate_quantity.required' =>'Số lượng đánh giá không được để trống.',
-    //                 'product_status.required' =>'Trạng thái sản phẩm không được để trống.',
-    //             ]);
+                $request->message([
+                    'timeworking.required' =>'thời gian làm việc không được để trống.',
+                ]);
 
-    //             $validate = $request->validate();
+                $validate = $request->validate();
 
-    //             if($validate):
-    //                 $result = $this->productModel->handleAddProduct($data);
+                if($validate):
+                    $result = $this->timeWorkModel->handleAddTimeWork($data);
 
-    //                 if($result):
-    //                     $response = [
-    //                         'status'=> true,
-    //                         'message' => 'Thêm sản phẩm thành công'
-    //                     ];
-    //                 else:
-    //                     $response = [
-    //                         'status'=> false,
-    //                         'message' => 'Thêm sản phẩm thất bại'
-    //                     ];
-    //                 endif;
-    //             else:
-    //                 $response = [
-    //                     'status' => false,
-    //                     'errors' => Session :: flash('pettu_session_errors')
-    //                 ];
-    //             endif;
+                    if($result):
+                        $response = [
+                            'status'=> true,
+                            'message' => 'Thêm thành công'
+                        ];
+                    else:
+                        $response = [
+                            'status'=> false,
+                            'message' => 'Thêm thất bại'
+                        ];
+                    endif;
+                else:
+                    $response = [
+                        'status' => false,
+                        'errors' => Session :: flash('pettu_session_errors')
+                    ];
+                endif;
 
-    //             echo json_encode($response);
-    //         endif;
-    //     endif;
+                echo json_encode($response);
+            endif;
+        endif;
 
-    // }
+    }
     
     // //Update thông tin sản phẩm
     // public function updateProduct() {

@@ -40,36 +40,23 @@ class TimeWorkModel extends Model {
             $response = $queryGet;
         endif;
        
-
         return $response;
     }
 
-    // //Thêm SP
-    // public function handleAddProduct($data = []){
-    //     $dataInsert = [
-    //         'product_name' => $data['product_name'],
-    //         'price' => $data['price'],
-    //         'quantity' => $data['quantity'],
-    //         'thumpnail1' => $data['thumpnail1'],
-    //         'thumpnail2' => $data['thumpnail2'],
-    //         'thumpnail3' => $data['thumpnail3'],
-    //         'promotionid' => $data['promotionid'],
-    //         'dimensions' => $data['dimensions'],
-    //         'color' => $data['color'],
-    //         'evaluate_star' => $data['evaluate_star'],
-    //         'evaluate_quantity' => $data['evaluate_quantity'],
-    //         'product_status' => $data['product_status'],
-    //         'created_at' => date('Y-m-d H:i:s'),
-    //     ];
+    //Thêm thời gian làm việc
+    public function handleAddTimeWork($data = []){
+        $dataInsert = [
+            'timeworking' => $data['timeworking'],
+        ];
 
-    //     $insertStatus = $this->db->table('product')->insert($dataInsert);
+        $insertStatus = $this->db->table('timeworking')->insert($dataInsert);
 
-    //     if($insertStatus):
-    //         return true;
-    //     endif;
+        if($insertStatus):
+            return true;
+        endif;
 
-    //     return false;
-    // }
+        return false;
+    }
 
     // //UPDATE PRODUCT
     // public function handleUpdateProduct($productId){
