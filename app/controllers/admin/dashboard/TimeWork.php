@@ -29,6 +29,38 @@ class TimeWork extends Controller {
         endif;
     }
 
+    public function getInfoTimeWork() {
+        $request = new Request();
+
+        if ($request->isPost()): // Kiểm tra get
+            $data = $request->getFields();
+
+            if (!empty($data['id'])):
+                $id = $data['id'];
+
+                $result = $this->timeWorkModel->handleGetInfoTimeWork($id); // Gọi xử lý ở Model
+
+                if (!empty($result)):
+                    $response = [
+                        'status' => true,
+                        'data' => $result
+                    ];
+                else:
+                    $response = [
+                        'message' => 'Đã có lỗi xảy ra'
+                    ];
+                endif;
+            else:
+                $response = [
+                    'message' => 'Đã có lỗi xảy ra!'
+                ];
+            endif;
+
+            echo json_encode($response);
+           
+        endif;
+    }
+
     // ADD Time Working
     public function addTimeWork(){
         $request = new Request();

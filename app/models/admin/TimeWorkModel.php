@@ -43,6 +43,21 @@ class TimeWorkModel extends Model {
         return $response;
     }
 
+    //Get infor time work
+    public function handleGetInfoTimeWork($id) {
+        $queryGet = $this->db->table('timeworking')
+            ->where('id','=',$id)    
+            ->first();
+
+        $response = [];
+        
+        if (!empty($queryGet)):
+            $response = $queryGet;
+        endif;    
+       
+        return $response;
+    }
+
     //Thêm thời gian làm việc
     public function handleAddTimeWork($data = []){
         $dataInsert = [
