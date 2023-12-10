@@ -31,6 +31,8 @@ $routes['api/dashboard/addProduct'] = 'admin/dashboard/product/addProduct';//API
 $routes['api/dashboard/uppdateProduct'] = 'admin/dashboard/product/updateProduct';//API cập nhập sản phẩm
 $routes['api/dashboard/deleteProduct'] = 'admin/dashboard/product/deleteProduct';//API xóa sản phẩm
 
+$routes['api/dashboard/getListTimeWork'] = 'admin/dashboard/timework/getListTimeWork';//API lấy danh sách thông tin thời gian việc làm
+
 
 // User API
 $routes['api/users/update'] = 'user/profile/updateInfo'; // API update thông tin người dùng - Profile
