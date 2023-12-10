@@ -78,5 +78,21 @@ class TimeWorkModel extends Model {
             endif;
         endif;
     }
- 
+    
+    // DELETE timework
+    public function handleDeleteTimeWork($id){
+        $queryGet = $this->db->table('timeworking')
+        ->where('id','=',$id)
+        ->first();
+
+        if(!empty($queryGet)):
+            $deleteData = $this->db->table('timeworking')
+            ->where('id','=',$id)
+            ->delete($queryGet);
+
+            if ($deleteData):
+                return true;
+            endif;
+        endif;
+    }
 }

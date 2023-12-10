@@ -118,4 +118,36 @@ class TimeWork extends Controller {
         endif;
     }
 
+    //DELETE timeworking
+    public function deleteTimeWork(){
+        $request = new Request();
+
+        if ($request->isPost()): // Kiểm tra get
+            $data = $request->getFields();
+
+            if (!empty($data['id'])):
+                $id = $data['id'];
+
+                $result = $this->timeWorkModel->handleDeleteTimeWork($id); // Gọi xử lý ở Model
+
+                if (!empty($result)):
+                    $response = [
+                        'message' => 'Xóa thành công',
+                    ];
+                else:
+                    $response = [
+                        'message' => 'Đã có lỗi xảy ra'
+                    ];
+                endif;
+            else:
+                $response = [
+                    'message' => 'Đã có lỗi xảy ra!'
+                ];
+            endif;
+
+            echo json_encode($response);
+           
+        endif;
+    }
+
 }
