@@ -16,6 +16,12 @@ Admin
 8. API thêm sản phẩm: http://localhost:80/Project_Pettu-main/api/dashboard/addProduct
 9. API xóa sản phẩm: http://localhost:80/Project_Pettu-main/api/dashboard/deleteProduct
 10.API cập nhập thông tin sản phâm: http://localhost:80/Project_Pettu-main/api/dashboard/uppdateProduct
+11.API danh sách các thời gian làm việc: http://localhost:8082/Project_Pettu/api/dashboard/getListTimeWork
+12.API thêm thời gian làm việc: http://localhost:80/Project_Pettu-main/api/dashboard/addTimeWork
+13.API xóa thời gian làm việc: http://localhost:80/Project_Pettu-main/api/dashboard/deleteTimeWork
+14.API cập nhập thời gian làm việc: http://localhost:80/Project_Pettu-main/api/dashboard/updateTimeWork
+15.API xem thông tin từng thời gian làm việc: http://localhost:80/Project_Pettu-main/api/dashboard/updateTimeWork
+
 
 
 Admin Page
