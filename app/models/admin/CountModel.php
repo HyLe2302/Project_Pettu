@@ -90,5 +90,65 @@ class CountModel extends Model {
     public function handleCountListService() {
         return count($this->handleGetListService());
     }
+
+    //BILL
+    public function handleGetListStatusBill() {
+        $queryGet = $this->db->table('bill')
+            ->select('billid')
+            ->where('status','=',0)
+            ->get();
+
+        $response = [];
+
+        if (!empty($queryGet)):
+            $response = $queryGet;
+        endif;
+
+        return $response;
+    }
+
+    public function handleCountListStatusBill() {
+        return count($this->handleGetListStatusBill());
+    }
+
+    // Status USER_Service
+    public function handleGetListStatusUser_Service() {
+        $queryGet = $this->db->table('user_service')
+            ->select('userid')
+            ->where('status','=',0)
+            ->get();
+
+        $response = [];
+
+        if (!empty($queryGet)):
+            $response = $queryGet;
+        endif;
+
+        return $response;
+    }
+
+    public function handleCountListStatusUser_Service() {
+        return count($this->handleGetListStatusUser_Service());
+    }
+
+    // Status Payment
+    public function handleGetListStatusPayment() {
+        $queryGet = $this->db->table('user_service')
+            ->select('userid')
+            ->where('payment_status','=',0)
+            ->get();
+
+        $response = [];
+
+        if (!empty($queryGet)):
+            $response = $queryGet;
+        endif;
+
+        return $response;
+    }
+
+    public function handleCountListStatusPayment() {
+        return count($this->handleGetListStatusPayment());
+    }
     
 }

@@ -82,4 +82,61 @@ class Count extends Controller{
         endif;
     }
 
+    public function countListStatusBill() {
+        $request = new Request();
+        $response = [];
+
+        if ($request->isGet()):
+            $result = $this->countModel->handleCountListStatusBill();
+
+            if (is_numeric($result)):
+                $response = $result;
+            else:
+                $response = [
+                    'status' => false,
+                ];
+            endif;
+
+            echo json_encode($response);
+        endif;
+    }
+
+    public function countListStatusPayment() {
+        $request = new Request();
+        $response = [];
+
+        if ($request->isGet()):
+            $result = $this->countModel->handleCountListStatusPayment();
+
+            if (is_numeric($result)):
+                $response = $result;
+            else:
+                $response = [
+                    'status' => false,
+                ];
+            endif;
+
+            echo json_encode($response);
+        endif;
+    }
+
+    public function countListStatusUser_Service() {
+        $request = new Request();
+        $response = [];
+
+        if ($request->isGet()):
+            $result = $this->countModel->handleCountListStatusUser_Service();
+
+            if (is_numeric($result)):
+                $response = $result;
+            else:
+                $response = [
+                    'status' => false,
+                ];
+            endif;
+
+            echo json_encode($response);
+        endif;
+    }
+
 }

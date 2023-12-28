@@ -35,6 +35,10 @@ Admin Page
 8. API đếm ds người dùng: http://localhost:8082/Project_Pettu/api/dashboard/countListUser
 9. API đếm ds sản phẩm: http://localhost:8082/Project_Pettu/api/dashboard/countListProduct
 10. API đếm ds dịch vụ: http://localhost:8082/Project_Pettu/api/dashboard/countListService
+11.API số đơn hàng chờ duyệt: http://localhost:80/Project_Pettu/api/dashboard/countListStatusBill
+12.API Số dịch vụ thanh toán chờ duyệt: http://localhost:80/Project_Pettu/api/dashboard/countListStatusPayment
+13.API số dịch vụ chờ duyệt: http://localhost:80/Project_Pettu/api/dashboard/countListStatusUser_Service
+
 
 
 

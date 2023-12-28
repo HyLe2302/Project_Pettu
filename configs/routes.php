@@ -41,6 +41,9 @@ $routes['api/dashboard/countListExpert'] = 'admin/dashboard/count/countListExper
 $routes['api/dashboard/countListUser'] = 'admin/dashboard/count/countListUser';
 $routes['api/dashboard/countListProduct'] = 'admin/dashboard/count/countListProduct';
 $routes['api/dashboard/countListService'] = 'admin/dashboard/count/countListService';
+$routes['api/dashboard/countListStatusBill'] = 'admin/dashboard/count/countListStatusBill';//API số đơn hàng chờ duyệt
+$routes['api/dashboard/countListStatusPayment'] = 'admin/dashboard/count/countListStatusPayment';//API Số dịch vụ thanh toán chờ duyệt
+$routes['api/dashboard/countListStatusUser_Service'] = 'admin/dashboard/count/countListStatusUser_Service';// API số dịch vụ chờ duyệt
 
 
 // User API
