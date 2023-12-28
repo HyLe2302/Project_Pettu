@@ -31,6 +31,12 @@ Admin Page
 4. API duyệt trạng thái đăng ký dịch vụ: http://localhost:8082/Project_Pettu/api/dashboard/confirmRegisterService
 5. API lấy danh sách dịch vụ đăng cần chờ duyệt: http://localhost:8082/Project_Pettu/api/dashboard/getPendingService
 6. API lấy trạng thái dịch vụ người dùng đã đăng ký: http://localhost:8082/Project_Pettu/api/dashboard/isRegistered
+7. API đếm ds nhân viên: http://localhost:8082/Project_Pettu/api/dashboard/countListExpert
+8. API đếm ds người dùng: http://localhost:8082/Project_Pettu/api/dashboard/countListUser
+9. API đếm ds sản phẩm: http://localhost:8082/Project_Pettu/api/dashboard/countListProduct
+10. API đếm ds dịch vụ: http://localhost:8082/Project_Pettu/api/dashboard/countListService
+
+
 
 
 User
