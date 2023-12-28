@@ -37,6 +37,11 @@ $routes['api/dashboard/updateTimeWork'] = 'admin/dashboard/timework/updateTimeWo
 $routes['api/dashboard/deleteTimeWork'] = 'admin/dashboard/timework/deleteTimeWork';//API xóa thời gian việc làm
 $routes['api/dashboard/getInfoTimeWork'] = 'admin/dashboard/timework/getInfoTimeWork';//API xem thông tin  thời gian việc làm của từng nhân viên
 
+$routes['api/dashboard/countListExpert'] = 'admin/dashboard/count/countListExpert';
+$routes['api/dashboard/countListUser'] = 'admin/dashboard/count/countListUser';
+$routes['api/dashboard/countListProduct'] = 'admin/dashboard/count/countListProduct';
+$routes['api/dashboard/countListService'] = 'admin/dashboard/count/countListService';
+
 
 // User API
 $routes['api/users/update'] = 'user/profile/updateInfo'; // API update thông tin người dùng - Profile
